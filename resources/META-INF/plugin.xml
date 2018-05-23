@@ -1,0 +1,42 @@
+<idea-plugin>
+    <id>io.samspel.angular.schematic.generator</id>
+    <name>Angular Schematic Generator</name>
+    <version>1.0</version>
+    <vendor email="samuel.haggren@gmail.com" url="https://github.com/Dasone/angularschematicgenerator">Samspel.io</vendor>
+
+    <description><![CDATA[
+      A plugin that creates Angular schematic files in directory from the "new" menu.<br>
+      Require Angular CLI to run.
+    ]]></description>
+
+    <change-notes><![CDATA[
+      First version of the plugin!
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="AngularGenerator.AngularGenerate"
+                class="main.kotlin.io.samspel.asg.action.AngularGenerate"
+                text="Angular Generate"
+                description="Create a new Angular schematic"
+                icon="/icons/angular-icon.png">
+            <add-to-group group-id="NewGroup" anchor="last"/>
+
+        </action>
+    </actions>
+
+</idea-plugin>
