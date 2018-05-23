@@ -2,7 +2,7 @@
     <id>io.samspel.angular.schematic.generator</id>
     <name>Angular Schematic Generator</name>
     <version>1.0</version>
-    <vendor email="samuel.haggren@gmail.com" url="https://github.com/Dasone/angularschematicgenerator">Samspel.io</vendor>
+    <vendor email="samuel.haggren@gmail.com" url="https://github.com/Dasone/angularschematicgenerator">Github repo</vendor>
 
     <description><![CDATA[
       A plugin that creates Angular schematic files in directory from the "new" menu.<br>
