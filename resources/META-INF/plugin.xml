@@ -1,8 +1,9 @@
 <idea-plugin>
     <id>io.samspel.angular.schematic.generator</id>
     <name>Angular Schematic Generator</name>
-    <version>1.0</version>
-    <vendor email="samuel.haggren@gmail.com" url="https://github.com/Dasone/angularschematicgenerator">Github repo</vendor>
+    <version>1.1</version>
+    <vendor email="samuel.haggren@gmail.com" url="https://github.com/Dasone/angularschematicgenerator">Samspel.io
+    </vendor>
 
     <description><![CDATA[
       A plugin that creates Angular schematic files in directory from the "new" menu.<br>
@@ -10,7 +11,17 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      First version of the plugin!
+    <h3>Version 1.1 is here!</h3>
+    <ol>
+        <li>Cleared up schematics that are only usable inside an already existing Angular project.</li>
+        <li>Stores the state of the plugin so it remembers the selected options between usage.</li>
+        <li>The plugin now only check if the Angular CLI is installed once, makes it to load faster.</li>
+        <li>Each schematics now have it own options.</li>
+        <li>Plugin screen now properly locate to the IntelliJ window.</li>
+    </ol>
+    <hr>
+    <h3>Version 1.0</h3>
+    <p>First version of the plugin!</p>
     ]]>
     </change-notes>
 
@@ -25,6 +36,8 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <projectService serviceInterface="main.kotlin.io.samspel.asg.state.StateStorage"
+                        serviceImplementation="main.kotlin.io.samspel.asg.state.StateStorage"/>
     </extensions>
 
     <actions>
